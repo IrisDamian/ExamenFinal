@@ -1,0 +1,68 @@
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header bg-dark text-center">
+      <h3 class="text-white">Nueva Ficha Médica</h3>
+    </div>
+    <div class="card-body">
+      <form action="/medical/new-medical-record" method="POST">
+        <div class="mb-3">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            placeholder="Nombre"
+            autofocus
+          />
+        </div>
+        <div class="mb-3">
+          <label for="edad">Edad:</label>
+          <input
+            type="number"
+            name="edad"
+            class="form-control"
+            placeholder="Edad"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="telefono">Teléfono:</label>
+          <input
+            type="text"
+            name="telefono"
+            class="form-control"
+            placeholder="Teléfono"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="direccion">Dirección:</label>
+          <input
+            type="text"
+            name="direccion"
+            class="form-control"
+            placeholder="Dirección"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="diagnostico">Diagnóstico:</label>
+          <input
+            type="text"
+            name="diagnostico"
+            class="form-control"
+            placeholder="Diagnóstico"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="observaciones">Observaciones:</label>
+          <textarea
+            name="observaciones"
+            class="form-control"
+            placeholder="Observaciones"
+          ></textarea>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

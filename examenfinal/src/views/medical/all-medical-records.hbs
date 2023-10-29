@@ -1,0 +1,31 @@
+<div class="row">
+  {{#each medicalRecords}}
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          {{ nombre }} <a href="/medical/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+        </h4>
+        <p>Edad: {{ edad }} </p>
+        <p>Teléfono: {{ telefono }} </p>
+        <p>Dirección: {{ direccion }} </p>
+        <p>Diagnóstico: {{ diagnostico }} </p>
+        <p>Observaciones: {{ observaciones }} </p>
+        <!-- VER TODAS LAS FICHAS MEDICAS -->
+        <form action="/medical/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h1>Hola {{user.name}}</h1>
+      <p class="lead">No hay fichas médicas todavía.</p>
+      <a href="/medical/add" class="btn btn-success btn-block">Crear una</a>
+    </div>
+  </div>
+  {{/each}}
+</div>

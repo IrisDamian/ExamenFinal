@@ -1,0 +1,10 @@
+body {
+  background-image: url('/img/fondo1.avif');
+  background-size: cover; /* Para ajustar la imagen al tamaño de la ventana del navegador */
+  background-repeat: no-repeat; 
+  background-position: center center;
+}
+
+.bg-black {
+  background: #b34e00;
+}

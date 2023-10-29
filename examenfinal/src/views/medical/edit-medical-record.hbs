@@ -1,0 +1,76 @@
+{{#each errors}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header text-center">
+      <h3>Editar Ficha Médica</h3>
+    </div>
+    <div class="card-body">
+      <form action="/medical/edit-medical-record/{{medicalRecord._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="mb-3">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            value="{{medicalRecord.nombre}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="edad">Edad:</label>
+          <input
+            type="number"
+            name="edad"
+            class="form-control"
+            value="{{medicalRecord.edad}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="telefono">Teléfono:</label>
+          <input
+            type="text"
+            name="telefono"
+            class="form-control"
+            value="{{medicalRecord.telefono}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="direccion">Dirección:</label>
+          <input
+            type="text"
+            name="direccion"
+            class="form-control"
+            value="{{medicalRecord.direccion}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="diagnostico">Diagnóstico:</label>
+          <input
+            type="text"
+            name="diagnostico"
+            class="form-control"
+            value="{{medicalRecord.diagnostico}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="observaciones">Observaciones:</label>
+          <textarea
+            name="observaciones"
+            class="form-control"
+          >{{medicalRecord.observaciones}}</textarea>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
